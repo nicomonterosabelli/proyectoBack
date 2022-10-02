@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <title>Odontologos</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/js/get2_odontologos.js"></script>
+
+    <script type="text/javascript" src="/js/update_odontologo.js"></script>
+
+    <script type="text/javascript" src="/js/delete_odontologo.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/index.html">Sistema</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Odontólogos
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/odontologosList.html">Listar odontólogos</a>
+                    <a class="dropdown-item" href="/odontologosAdd.html">Agregar odontólogos</a>
+                    <a class="dropdown-item" href="/odontologosDeleteUp.html">Modificar y eliminar odontologos</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
+<div class="container">
+
+    <div id="div_odontologo_table">
+
+        <h1>Odontologos</h1>
+
+        <div class="row col-md-6 table-responsive">
+
+            <table id="odontologoTable" class="table table-striped">
+
+                <thead>
+
+                <tr>
+
+                    <th>Id</th>
+
+                    <th>Numero de Matricula</th>
+
+                    <th>Nombre</th>
+
+                    <th>Apellido</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="odontologoTableBody">
+
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6" style="display: none;
+
+            background-color:#e6fffa; padding:10px; border-radius:3px"
+
+             id="div_odontologo_updating">
+
+            <form id="update_odontologo_form">
+
+                <div class="form-group">
+
+                    <label >Id:</label>
+
+                    <input type="text" class="form-control" id="odontologo_id" readonly>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label >Numero de Matricula:</label>
+
+                    <input type="text" class="form-control"
+
+                           placeholder="Numero de matricula" id="numeroMatricula">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label >Nombre:</label>
+
+                    <input type="text" class="form-control"
+
+                           placeholder="nombre" id="nombre">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label >Apellido:</label>
+
+                    <input type="text" class="form-control"
+
+                           placeholder="apellido" id="apellido">
+
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary">Modificar</button>
+
+            </form>
+
+            <div id="response" style="display:none; margin:10px">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+</div>
+
+</body>
+
+</html>
